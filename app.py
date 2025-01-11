@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import random
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 # Load your dataset
 df = pd.read_parquet('all_models.parquet')
