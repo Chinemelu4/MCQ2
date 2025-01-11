@@ -24,11 +24,12 @@ if st.button('Generate Sample'):
     if len(filtered_true) > 2:
         filtered_true = filtered_true.sample(n=5,random_state=num)
     if len(filtered_false) > 8:
-        filtered_false = filtered_false.sample(n=5,random_state=num)
+        filtered_false = filtered_false.sample(n=20,random_state=num)
     
     true_false_df = pd.concat([filtered_true, filtered_false],ignore_index=True)
-    
-    st.write(true_false_df[['sample_id', 'question', 'correct_answer2', 'model', 'model_answer', 'Correct and consistent with scientific consensus',
+    filtered_false.reset_index(drop=True,inplace=True)
+    #st.write(true_false_df[['sample_id', 'question', 'correct_answer2', 'model', 'model_answer', 'Correct and consistent with scientific consensus',
+    st.write(filtered_false[['sample_id', 'question', 'correct_answer2', 'model', 'model_answer', 'Correct and consistent with scientific consensus',
        'Requires African local expertise', 'Omission of relevant info',
        'Includes irrelevant- wrong- or extraneous information',
        'Evidence of correct reasoning or logic',
@@ -40,7 +41,7 @@ if st.button('Generate Sample'):
     def convert_df_to_csv(df1):
         return df1.to_csv(index=False).encode('utf-8')
 
-    csv = convert_df_to_csv(true_false_df)
+    csv = convert_df_to_csv(filtered_false)
     st.download_button(
         label="Download CSV",
         data=csv,
