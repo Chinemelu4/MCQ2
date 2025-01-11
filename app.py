@@ -23,8 +23,10 @@ if st.button('Generate Sample'):
 
     if len(filtered_true) > 2:
         filtered_true = filtered_true.sample(n=5,random_state=num)
-    if len(filtered_false) > 8:
+    if len(filtered_false) > 20:
         filtered_false = filtered_false.sample(n=20,random_state=num)
+
+        
     
     true_false_df = pd.concat([filtered_true, filtered_false],ignore_index=True)
     filtered_false.reset_index(drop=True,inplace=True)
