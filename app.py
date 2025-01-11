@@ -21,8 +21,8 @@ if st.button('Generate Sample'):
     filtered_false = filtered_df[filtered_df['correct'] == 0]
     num = np.random.randint(10000)
 
-    if len(filtered_true) > 2:
-        filtered_true = filtered_true.sample(n=5,random_state=num)
+    # if len(filtered_true) > 2:
+    #     filtered_true = filtered_true.sample(n=5,random_state=num)
     if len(filtered_false) > 20:
         filtered_false = filtered_false.sample(n=20,random_state=num)
 
