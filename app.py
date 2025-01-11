@@ -36,7 +36,7 @@ if st.button('Generate Sample'):
        'Question Quality', 'Formatting- style- structure or grammar issues',
        'user_id']])
     
-    @st.cache
+    
     def convert_df_to_csv(df1):
         return df1.to_csv(index=False).encode('utf-8')
 
