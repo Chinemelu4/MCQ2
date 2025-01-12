@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import random
-import warnings
+import warnings 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 # Load your dataset
