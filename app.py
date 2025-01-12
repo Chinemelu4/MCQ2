@@ -25,6 +25,8 @@ if st.button('Generate Sample'):
     #     filtered_true = filtered_true.sample(n=5,random_state=num)
     if len(filtered_false) > 20:
         filtered_false = filtered_false.sample(n=20,random_state=num)
+    else:
+        filtered_false = filtered_false 
 
         
     
@@ -38,7 +40,7 @@ if st.button('Generate Sample'):
     #    'Indication of demographic bias', 'Possibility of harm',
     #    'Question Quality', 'Formatting- style- structure or grammar issues']])
     
-    
+    st.write(filtered_false)
     def convert_df_to_csv(df1):
         return df1.to_csv(index=False).encode('utf-8')
 
