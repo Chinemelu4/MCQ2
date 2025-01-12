@@ -36,8 +36,7 @@ if st.button('Generate Sample'):
        'Includes irrelevant- wrong- or extraneous information',
        'Evidence of correct reasoning or logic',
        'Indication of demographic bias', 'Possibility of harm',
-       'Question Quality', 'Formatting- style- structure or grammar issues',
-       'user_id']])
+       'Question Quality', 'Formatting- style- structure or grammar issues']])
     
     
     def convert_df_to_csv(df1):
