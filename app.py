@@ -31,7 +31,7 @@ if st.button('Generate Sample'):
     true_false_df = pd.concat([filtered_true, filtered_false],ignore_index=True)
     filtered_false.reset_index(drop=True,inplace=True)
     #st.write(true_false_df[['sample_id', 'question', 'correct_answer2', 'model', 'model_answer', 'Correct and consistent with scientific consensus',
-    st.write(filtered_false[['sample_id', 'question', 'correct_answer2', 'model', 'model_answer', 'Correct and consistent with scientific consensus',
+    st.write(filtered_false[['sample_id', 'question', 'correct_answer2', 'model', 'model_answer', 'Rationale', 'Correct and consistent with scientific consensus',
        'Requires African local expertise', 'Omission of relevant info',
        'Includes irrelevant- wrong- or extraneous information',
        'Evidence of correct reasoning or logic',
